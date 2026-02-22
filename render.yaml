@@ -2,6 +2,7 @@ services:
   - type: web
     name: mining-dashboard
     runtime: python
+    branch: dev
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:server --workers 2
     envVars:
