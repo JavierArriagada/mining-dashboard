@@ -103,10 +103,10 @@ quadrantChart
     title Throughput vs Eficiencia Energética (promedios anuales)
     x-axis "Energía Específica baja → alta (kWh/t)"
     y-axis "Throughput bajo → alto (t/h)"
-    quadrant-1 Alto rendimiento
-    quadrant-2 Alta producción, baja eficiencia
-    quadrant-3 Bajo rendimiento
-    quadrant-4 Eficiente pero baja producción
+    quadrant-1 "Alto rendimiento"
+    quadrant-2 "Alta producción, baja eficiencia"
+    quadrant-3 "Bajo rendimiento"
+    quadrant-4 "Eficiente pero baja producción"
     HPGR-01: [0.47, 0.51]
     HPGR-02: [0.73, 0.39]
     HPGR-03: [0.33, 0.62]
