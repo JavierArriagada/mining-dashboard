@@ -1,0 +1,119 @@
+/* ── Mining Dashboard – Custom Styles ── */
+
+:root {
+    --bg-dark: #0d1117;
+    --bg-card: #161b22;
+    --bg-card2: #1c2128;
+    --accent: #e8a020;
+    --accent2: #2ea44f;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --border: #30363d;
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text) !important;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-card) !important;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0,0,0,.5);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent) !important;
+    letter-spacing: .5px;
+}
+.nav-link { color: var(--text) !important; }
+.nav-link:hover { color: var(--accent) !important; }
+.nav-link.active { color: var(--accent) !important; font-weight: 600; }
+
+/* KPI Cards */
+.kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.5);
+}
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+.kpi-label {
+    font-size: .8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: .3rem;
+}
+.kpi-icon {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+
+/* Chart cards */
+.chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+.chart-title {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .8rem;
+}
+
+/* Page header */
+.page-header {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+.page-header h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+.page-header p {
+    color: var(--text-muted);
+    font-size: .85rem;
+    margin: 0;
+}
+
+/* Tabs */
+.nav-tabs { border-color: var(--border); }
+.nav-tabs .nav-link {
+    color: var(--text-muted) !important;
+    border-color: transparent !important;
+}
+.nav-tabs .nav-link.active {
+    background: var(--bg-card2) !important;
+    border-color: var(--border) var(--border) var(--bg-card2) !important;
+    color: var(--accent) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Badge safety */
+.badge-safe { background: #1a4731; color: #2ea44f; border-radius: 20px; padding: .3rem .8rem; font-weight: 700; }
+.badge-warn { background: #3d2f0a; color: var(--accent); border-radius: 20px; padding: .3rem .8rem; font-weight: 700; }
