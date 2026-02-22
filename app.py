@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc, Input, Output
 
 from components.navbar import create_navbar
-from pages import overview, produccion, equipos, seguridad, costos
+from pages import overview, produccion, equipos, seguridad, costos, molinos
 
 # ── App ──────────────────────────────────────────────────────────────────────
 app = dash.Dash(
@@ -46,6 +46,7 @@ def display_page(pathname):
         "/equipos": equipos.layout,
         "/seguridad": seguridad.layout,
         "/costos": costos.layout,
+        "/molinos": molinos.layout,
     }
     page_fn = routes.get(pathname, overview.layout)
     return page_fn()

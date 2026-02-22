@@ -25,6 +25,7 @@ def create_navbar():
                             dbc.NavItem(dbc.NavLink("Equipos", href="/equipos", active="exact")),
                             dbc.NavItem(dbc.NavLink("Seguridad", href="/seguridad", active="exact")),
                             dbc.NavItem(dbc.NavLink("Costos", href="/costos", active="exact")),
+                            dbc.NavItem(dbc.NavLink("Molinos HPGR", href="/molinos", active="exact")),
                         ],
                         className="ms-auto",
                         navbar=True,
