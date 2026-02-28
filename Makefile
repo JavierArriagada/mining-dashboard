@@ -28,7 +28,8 @@ PORT := 8050
 help:
 	@echo ""
 	@echo "  MineVision Dashboard"
-	@echo "  ─────────────────────────────────────────────"
+	@echo "  =================================================="
+	@echo ""
 	@echo "  make setup     Crea venv + instala dependencias"
 	@echo "  make run       Ejecuta la app (localhost:$(PORT))"
 	@echo "  make install   Solo actualiza dependencias"
@@ -37,16 +38,16 @@ help:
 	@echo "  make reset     clean + setup"
 	@echo ""
 
-# ── Crear venv ───────────────────────────────────────────────
+# Crear venv
 $(VENV_OK):
-	@echo "→ Creando entorno virtual..."
+	@echo "[*] Creando entorno virtual..."
 	python3 -m venv $(VENV) 2>/dev/null || python -m venv $(VENV)
 	@echo "  OK  Entorno virtual creado en $(VENV)/"
 
-# ── Setup completo ───────────────────────────────────────────
+# Setup completo
 .PHONY: setup
 setup: $(VENV_OK)
-	@echo "→ Instalando dependencias..."
+	@echo "[*] Instalando dependencias..."
 	$(PYTHON) -m pip install --upgrade pip --quiet
 	$(PYTHON) -m pip install -r requirements.txt
 	@echo ""
@@ -59,10 +60,10 @@ install: $(VENV_OK)
 	$(PYTHON) -m pip install --upgrade pip --quiet
 	$(PYTHON) -m pip install -r requirements.txt
 
-# ── Ejecutar app ──────────────────────────────────────────────
+# Ejecutar app
 .PHONY: run
 run: $(VENV_OK)
-	@echo "→ http://localhost:$(PORT)"
+	@echo "[*] http://localhost:$(PORT)"
 	$(PYTHON) $(APP)
 
 # ── Freeze ───────────────────────────────────────────────────
